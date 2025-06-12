@@ -1,0 +1,26 @@
+@import "typo/webfonts.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+  @apply hidden;
+}
+
+main {
+}
+
+main p, main ul {
+  @apply mb-16;
+}
+
+main a {
+  @apply underline underline-offset-2 decoration-1 hover:no-underline;
+}
+
+strong {
+  @apply font-bold;
+}
+
+

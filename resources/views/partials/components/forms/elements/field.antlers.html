@@ -1,0 +1,7 @@
+<input 
+  type="{{ type ? type : 'text' }}"
+  name="{{ field }}"
+  value="{{ value }}"
+  placeholder="{{ placeholder }}"
+  required
+  class="bg-white w-full py-10 xl:py-20 outline-none !ring-0 focus:ring-0 focus:border-granite border-granite text-granite placeholder:text-granite leading-none relative {{ error ? 'placeholder:!text-crimson !border-crimson focus:placeholder:text-granite' : ''}} valid:!border-granite">

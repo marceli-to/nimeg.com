@@ -1,0 +1,10 @@
+<a href="javascript:;" x-on:click="isVisible = false"
+  x-data="{ isVisible: true }" 
+  x-show="isVisible" 
+  x-init="setTimeout(() => { isVisible = false }, 5000)"
+  class="bg-crimson !text-white !no-underline p-15 sm:px-20 sm:py-15 fixed top-0 left-0 sm:top-15 sm:left-15 w-full sm:inline-block sm:w-auto sm:max-w-xl z-[500]">
+  <span class="block pr-20">
+    Hoppla, da fehlt noch etwas! Bitte prüfen Sie Ihre Eingaben und versuchen Sie es noch einmal.
+  </span>
+  {{ partial:icons/cross-sm class="absolute top-15 right-15" }}
+</a>

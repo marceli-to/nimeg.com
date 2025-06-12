@@ -1,0 +1,44 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: advert
+            field:
+              max_files: 1
+              container: assets
+              folder: downloads
+              type: assets
+              display: Inserat
+              instructions: 'PDF zum verlinken'
+              instructions_position: below
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - jobs
+              max_items: 1
+              listable: false
+              localizable: true
+title: Job

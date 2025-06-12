@@ -1,0 +1,27 @@
+{{ nocache }}
+  {{ form:contact_form }}
+    <input type="hidden" name="webs1te" value="">
+
+    {{ if errors }}
+      {{ partial:components/forms/elements/errors }}
+    {{ /if }}
+  
+    {{ if success }}
+      {{ partial:components/forms/elements/success }}
+        Vielen Dank für Ihre Anfrage.
+      {{ /partial:components/forms/elements/success }}
+    {{ /if }}
+
+    <div class="flex flex-col gap-y-20">
+      {{ partial:components/forms/elements/field field="name" placeholder="Name*" value="{{ old:name }}" error="{{ error:name ? true : false }}" }}
+      {{ partial:components/forms/elements/field field="company" placeholder="Firma*" value="{{ old:company }}" error="{{ error:company ? true : false }}" }}
+      {{ partial:components/forms/elements/field type="email" field="email" placeholder="E-Mail*" value="{{ old:email }}" error="{{ error:email ? true : false }}" }}
+      {{ partial:components/forms/elements/field field="phone" placeholder="Telefon*" }}
+      {{ partial:components/forms/elements/textarea field="utilization_idea" placeholder="Branche/Nutzungsidee*" value="{{ old:utilization_idea }}" error="{{ error:utilization_idea ? true : false }}" }}
+      <div class="flex justify-end">
+      {{ partial:components/forms/elements/button label="Absenden" }}
+      </div>
+    </div>
+        
+  {{ /form:contact_form }}
+{{ /nocache }}

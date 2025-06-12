@@ -1,0 +1,12 @@
+<label for="{{ id }}" class="flex items-start sm:items-center {{ error ? 'text-crimson' : '' }}">
+  <input 
+    type="checkbox" 
+    name="{{ field }}" 
+    id="{{ id }}"
+    {{ if value }}
+      checked
+    {{ /if }}
+    value="1"
+    class="accent-white size-20 mr-10 bg-white hover:bg-white checked:hover:!bg-beige checked:!bg-beige text-almond !ring-0 !border-beige">
+    {{ slot }}
+</label>

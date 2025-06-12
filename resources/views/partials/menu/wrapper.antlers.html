@@ -1,0 +1,20 @@
+<div 
+  x-cloak 
+  x-show="menu"
+  class="bg-white lg:bg-transparent fixed lg:relative left-0 top-0 h-dvh lg:h-auto w-full flex flex-col lg:!block">
+  <a 
+    href="javascript:;" 
+    x-on:click="menu = ! menu" 
+    title="{{ "Menü anzeigen" | trans }}"
+    :class="{ 'is-active': menu === true }"
+    class="fixed top-32 md:top-65 left-33 md:left-80 block mx-auto w-28 h-auto lg:hidden">
+    {{ partial:icons/cross class="w-full h-auto" }}
+  </a>
+  <nav class="mt-160 md:mt-140 lg:mt-0">
+    <ul class="flex flex-col lg:flex-row gap-y-25 lg:gap-y-0 lg:gap-x-25 xl:gap-x-45 px-30 md:py-80 lg:px-0">
+      {{ nav:main }}
+        {{ partial:menu/items/parent }}
+      {{ /nav:main }}
+    </ul>
+  </nav>
+</div>

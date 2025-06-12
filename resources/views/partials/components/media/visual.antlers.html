@@ -1,0 +1,27 @@
+<figure class="">
+  <picture>
+    <source media="(min-width: 1280px)" srcset="/assets/{{ image }}-2xl.avif" type="image/avif">
+    <source media="(min-width: 1024px)" srcset="/assets/{{ image }}-xl.avif" type="image/avif">
+    <source media="(min-width: 768px)" srcset="/assets/{{ image }}-lg.avif" type="image/avif">
+    <source srcset="/assets/{{ image }}.avif" type="image/avif">
+
+    <source media="(min-width: 1280px)" srcset="/assets/{{ image }}-2xl.webp" type="image/webp">
+    <source media="(min-width: 1024px)" srcset="/assets/{{ image }}-xl.webp" type="image/webp">
+    <source media="(min-width: 768px)" srcset="/assets/{{ image }}-lg.webp" type="image/webp">
+    <source srcset="/assets/{{ image }}.webp" type="image/webp">
+
+    <source media="(min-width: 1280px)" srcset="/assets/{{ image }}-2xl.jpg" type="image/jpeg">
+    <source media="(min-width: 1024px)" srcset="/assets/{{ image }}-xl.jpg" type="image/jpeg">
+    <source media="(min-width: 768px)" srcset="/assets/{{ image }}-lg.jpg" type="image/jpeg">
+
+    <img 
+      src="/assets/{{ image }}.jpg" 
+      alt="{{ alt }}" 
+      title="{{ alt }}" 
+      height="{{ height }}" 
+      width="{{ width }}"
+      class="block w-full h-auto xl:aspect-[16/7] xl:h-full"
+      loading="lazy">
+  </picture>
+  {{ slot }}
+</figure>

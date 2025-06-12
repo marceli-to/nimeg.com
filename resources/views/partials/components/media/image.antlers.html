@@ -1,0 +1,46 @@
+<figure>
+  <picture>
+
+    {{ if (breakpoints | in_array('2xl')) }}
+      <source media="(min-width: 1440px)" srcset="/assets/{{ image }}-2xl.avif" type="image/avif">
+    {{ /if }}
+    {{ if (breakpoints | in_array('xl')) }}
+      <source media="(min-width: 1280px)" srcset="/assets/{{ image }}-xl.avif" type="image/avif">
+    {{ /if }}
+    {{ if (breakpoints | in_array('lg')) }}
+      <source media="(min-width: 1024px)" srcset="/assets/{{ image }}-lg.avif" type="image/avif">
+    {{ /if }}
+    <source srcset="/assets/{{ image }}.avif" type="image/avif">
+
+    {{ if (breakpoints | in_array('2xl')) }}
+      <source media="(min-width: 1440px)" srcset="/assets/{{ image }}-2xl.webp" type="image/webp">
+    {{ /if }}
+    {{ if (breakpoints | in_array('xl')) }}
+      <source media="(min-width: 1280px)" srcset="/assets/{{ image }}-xl.webp" type="image/webp">
+    {{ /if }}
+    {{ if (breakpoints | in_array('lg')) }}
+      <source media="(min-width: 1024px)" srcset="/assets/{{ image }}-lg.webp" type="image/webp">
+    {{ /if }}
+    <source srcset="/assets/{{ image }}.webp" type="image/webp">
+
+    {{ if (breakpoints | in_array('2xl')) }}
+      <source media="(min-width: 1440px)" srcset="/assets/{{ image }}-2xl.jpg" type="image/jpeg">
+    {{ /if }}
+    {{ if (breakpoints | in_array('xl')) }}
+      <source media="(min-width: 1280px)" srcset="/assets/{{ image }}-xl.jpg" type="image/jpeg">
+    {{ /if }}
+    {{ if (breakpoints | in_array('lg')) }}
+      <source media="(min-width: 1024px)" srcset="/assets/{{ image }}-lg.jpg" type="image/jpeg">
+    {{ /if }}
+
+    <img 
+      src="/assets/{{ image }}.jpg" 
+      alt="{{ alt }}" 
+      title="{{ alt }}" 
+      height="{{ height }}" 
+      width="{{ width }}"
+      class="block w-full h-auto {{ class }}"
+      loading="lazy">
+
+  </picture>
+</figure>

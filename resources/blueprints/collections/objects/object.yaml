@@ -1,0 +1,79 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: number
+            field:
+              type: text
+              display: Nummer
+          -
+            handle: type
+            field:
+              options:
+                Atelier: Atelier
+                Büro: Büro
+                Halle: Halle
+              default: atelier
+              type: select
+              display: Typ
+          -
+            handle: floor
+            field:
+              options:
+                eg: EG
+                og: OG
+                dg: DG
+              default: eg
+              type: select
+              display: Etage
+          -
+            handle: space
+            field:
+              type: text
+              display: Fläche
+          -
+            handle: form_url
+            field:
+              type: text
+              display: 'Formular URL'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: state
+            field:
+              options:
+                available: verfügbar
+                reserved: reserviert
+                rented: vermietet
+              type: select
+              display: Status
+              default: available
+          -
+            handle: title
+            field:
+              type: text
+              required: false
+              validate:
+                - required
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - objects
+              max_items: 1
+              listable: false
+              localizable: true
+title: Object

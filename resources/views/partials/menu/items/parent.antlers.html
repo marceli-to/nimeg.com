@@ -1,0 +1,41 @@
+<li
+  class="group relative lg:py-15" 
+  :key="'menu-item-{{ id }}'">
+
+  <div class="flex justify-between items-center">
+
+    <a 
+      href="{{ url }}" 
+      class="block leading-none font-bold text-2xl md:text-3xl lg:text-lg hover:underline underline-offset-10 lg:underline-offset-8 decoration-3 {{ is_current || is_parent ? 'underline' : '' }}"
+      x-on:click="menu = false" 
+      target="{{ is_external ? '_blank' : '_self' }}"
+      title="{{ title }}">
+      {{ title }}
+    </a>
+
+    {{ if children }}
+      <button 
+        type="button" 
+        x-on:click="subMenuId === '{{ id }}' ? subMenuId = null : subMenuId = '{{ id }}'" 
+        class="lg:hidden ml-8"
+        :aria-expanded="subMenuId === '{{ id }}'"
+        :aria-controls="'submenu-{{ id }}'">
+        {{ partial:icons/chevron-down class="w-20 h-20 transition-transform duration-300" }}
+      </button>
+    {{ /if }}
+
+  </div>
+
+  {{ if children }}
+    <ul 
+      x-show="subMenuId === '{{ id }}'" 
+      x-cloak
+      id="submenu-{{ id }}"
+      class="flex flex-col gap-y-5 pt-25 lg:p-15 lg:pr-30 lg:absolute lg:top-full lg:-left-15 lg:hidden lg:group-hover:flex lg:bg-white lg:shadow-md">
+      {{ children }}
+        {{ partial:menu/items/children }}
+      {{ /children }}
+    </ul>
+  {{ /if }}
+  
+</li>

@@ -1,0 +1,41 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              type: text
+              display: Name
+              validate:
+                - required
+          -
+            handle: company
+            field:
+              type: text
+              display: Firma
+              validate:
+                - required
+          -
+            handle: email
+            field:
+              input_type: email
+              type: text
+              display: E-Mail
+              validate:
+                - required
+                - email
+          -
+            handle: phone
+            field:
+              type: text
+              display: Telefon
+          -
+            handle: utilization_idea
+            field:
+              type: textarea
+              display: Nutzungsidee
+              validate:
+                - required
