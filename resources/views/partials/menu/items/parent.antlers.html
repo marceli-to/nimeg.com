@@ -38,7 +38,7 @@
       x-show="subMenuId === '{{ id }}' || '{{ is_current || is_parent }}'"
       x-cloak
       id="submenu-{{ id }}"
-      class="flex flex-col gap-y-5 {{ is_current || is_parent ? 'pt-30' : 'pt-20' }}  lg:p-15 lg:pr-30 lg:absolute lg:top-full lg:-left-15 lg:hidden lg:group-hover:!flex lg:bg-white lg:shadow-md">
+      class="flex flex-col gap-y-5 pt-15 lg:p-15 lg:pr-30 lg:absolute lg:top-full lg:-left-15 lg:hidden lg:group-hover:!flex lg:bg-white lg:shadow-md">
       {{ children }}
         {{ partial:menu/items/children }}
       {{ /children }}

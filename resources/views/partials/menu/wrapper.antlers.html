@@ -1,7 +1,8 @@
 <div 
   x-cloak 
   x-show="menu"
-  class="bg-white lg:bg-transparent fixed lg:relative left-0 top-0 h-dvh lg:h-auto w-full flex flex-col lg:!block overflow-auto lg:overflow-hidden pb-30 lg:pb-0">
+  class="bg-white lg:bg-transparent fixed lg:relative left-0 top-0 h-dvh lg:h-auto w-full flex flex-col lg:!block pb-30 lg:pb-0"
+  :class="menu ? 'overflow-y-auto lg:overflow-visible' : ''">
   <a 
     href="javascript:;" 
     x-on:click="menu = ! menu" 
@@ -10,8 +11,8 @@
     class="fixed top-32 left-33 block mx-auto w-28 h-auto lg:hidden">
     {{ partial:icons/cross class="w-full h-auto" }}
   </a>
-  <nav class="mt-160 md:mt-[240px] md:max-w-xl lg:max-w-none lg:mt-0">
-    <ul class="flex flex-col lg:flex-row gap-y-35 md:gap-y-45 lg:gap-y-0 lg:gap-x-25 xl:gap-x-45 px-30 lg:px-0">
+  <nav class="mt-145 md:mt-[240px] md:max-w-xl lg:max-w-none lg:mt-0">
+    <ul class="flex flex-col lg:flex-row gap-y-25 md:gap-y-45 lg:gap-y-0 lg:gap-x-25 xl:gap-x-45 px-30 lg:px-0">
       {{ nav:main }}
         {{ partial:menu/items/parent }}
       {{ /nav:main }}
