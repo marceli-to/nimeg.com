@@ -6,7 +6,7 @@
 
     <a 
       href="{{ url }}" 
-      class="block leading-none font-bold text-2xl md:text-3xl lg:text-lg hover:underline underline-offset-10 lg:underline-offset-8 decoration-3 {{ is_current || is_parent ? 'underline' : '' }}"
+      class="block leading-none font-bold text-2xl md:text-3xl lg:text-lg hover:underline underline-offset-10 lg:underline-offset-8 decoration-3 {{ is_current || is_parent ? 'underline mb-10' : '' }}"
       x-on:click="menu = false" 
       target="{{ is_external ? '_blank' : '_self' }}"
       title="{{ title }}">
@@ -17,10 +17,17 @@
       <button 
         type="button" 
         x-on:click="subMenuId === '{{ id }}' ? subMenuId = null : subMenuId = '{{ id }}'" 
-        class="lg:hidden ml-8"
+        class="lg:hidden"
         :aria-expanded="subMenuId === '{{ id }}'"
         :aria-controls="'submenu-{{ id }}'">
-        {{ partial:icons/chevron-down class="w-20 h-20 transition-transform duration-300" }}
+
+        <span x-show="subMenuId === '{{ id }}' || '{{ is_current || is_parent }}' === '1'">
+          {{ partial:icons/chevron-up class="w-20 h-20" }}
+        </span>
+        
+        <span x-show="subMenuId !== '{{ id }}' && '{{ is_current || is_parent }}' !== '1'">
+          {{ partial:icons/chevron-down class="w-20 h-20" }}
+        </span>
       </button>
     {{ /if }}
 
@@ -28,10 +35,10 @@
 
   {{ if children }}
     <ul 
-      x-show="subMenuId === '{{ id }}'" 
+      x-show="subMenuId === '{{ id }}' || '{{ is_current || is_parent }}'"
       x-cloak
       id="submenu-{{ id }}"
-      class="flex flex-col gap-y-5 pt-25 lg:p-15 lg:pr-30 lg:absolute lg:top-full lg:-left-15 lg:hidden lg:group-hover:flex lg:bg-white lg:shadow-md">
+      class="flex flex-col gap-y-5 {{ is_current || is_parent ? 'pt-30' : 'pt-20' }}  lg:p-15 lg:pr-30 lg:absolute lg:top-full lg:-left-15 lg:hidden lg:group-hover:!flex lg:bg-white lg:shadow-md">
       {{ children }}
         {{ partial:menu/items/children }}
       {{ /children }}
