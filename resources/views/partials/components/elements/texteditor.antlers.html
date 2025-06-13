@@ -1,0 +1,24 @@
+{{ partial:layout/container }}
+  {{ if two_cols }}
+    <div class="lg:grid lg:grid-cols-12 lg:gap-x-18 mt-60">
+      {{ if text_left }}
+        <article class="lg:col-span-6 {{ text_right ? 'mb-20 lg:mb-0' : ''}}">
+          {{ partial:components/elements/editor :content="text_left" }}
+        </article>
+      {{ /if }}
+      {{ if text_right }} 
+        <article class="lg:col-span-6 {{ text_left ? 'lg:mt-2' : ''}}">
+          {{ partial:components/elements/editor :content="text_right" }}
+        </article>
+      {{ /if }}
+    </div>
+  {{ else }}
+    <div class="lg:grid lg:grid-cols-12 lg:gap-x-18">
+      {{ if text }}
+        <article class="lg:col-span-6">
+          {{ partial:components/elements/editor :content="text" }}
+        </article>
+      {{ /if }}
+    </div>
+  {{ /if }}
+{{ /partial:layout/container }}

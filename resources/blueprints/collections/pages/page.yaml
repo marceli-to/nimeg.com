@@ -25,9 +25,27 @@ tabs:
                 content_elements:
                   display: 'Content elements'
                   sets:
-                    neues_set:
-                      display: 'Neues Set'
-                      fields: {  }
+                    intro_visual:
+                      display: 'Intro Visual'
+                      instructions: 'Intro visual hinzufügen'
+                      icon: text-formatting-image-top
+                      fields:
+                        -
+                          import: intro_visual
+                    texteditor:
+                      display: Texteditor
+                      instructions: 'Texteditor für 1- oder 2-spaltigen Text.'
+                      icon: text-formatting-markdown
+                      fields:
+                        -
+                          import: texteditor
+                    image_gallery:
+                      display: Bildergalerie
+                      instructions: 'Bildergalerie hinzufügen'
+                      icon: media-image-picture-gallery
+                      fields:
+                        -
+                          import: image_gallery
   seo:
     display: SEO
     sections:

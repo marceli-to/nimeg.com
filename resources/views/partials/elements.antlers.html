@@ -1,3 +1,17 @@
 {{ if type == 'editor' }}
   {{ partial:components/editor }}
 {{ /if }}
+
+{{ if type == 'intro_visual' }}
+  {{ partial:components/elements/intro_visual :image="image" }}
+{{ /if }}
+
+{{ if type == 'texteditor' }}
+  {{ partial:components/elements/texteditor }}
+{{ /if }}
+
+{{ if type == 'image_gallery' }}
+  {{ partial:components/elements/image_gallery }}
+{{ /if }}
+  
+

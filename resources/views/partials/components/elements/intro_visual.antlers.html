@@ -1,0 +1,20 @@
+<div class="relative">
+{{ partial:components/media/image 
+  class="aspect-[4/3] md:aspect-[16/10] lg:aspect-[16/9] xl:aspect-[16/8] object-cover" }}
+  {{ if title || text }}
+    <div>
+      <div class="bg-sky/80 text-white p-30 md:px-80 md:py-40 lg:px-60 lg:absolute lg:bottom-80 lg:right-80 lg:max-w-[700px]">
+        {{ if title }}
+          <h1 class="font-bold text-2xl md:text-3xl xl:text-4xl leading-[1.2] mb-30">
+            {{ title }}
+          </h1>
+        {{ /if }}
+        {{ if text }}
+          <div class="text-lg md:text-xl">
+            {{ text }}
+          </div>
+        {{ /if }}
+      </div>
+    </div>
+  {{ /if }}
+</div>

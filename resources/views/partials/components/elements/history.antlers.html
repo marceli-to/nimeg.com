@@ -1,0 +1,21 @@
+{{# <div class="grid grid-cols-12 gap-x-18">
+  {{ entries }}
+    <div class="col-span-3 xl:col-span-2">
+      {{ periode }}
+    </div>
+    <div class="col-span-9 xl:col-span-10 [>p]:mb-0">
+      {{ description }}
+    </div>
+  {{ /entries }}
+</div> #}}
+
+<div class="flex flex-wrap gap-x-18">
+  {{ entries }}
+    <div class="w-[100px]">
+      {{ periode }}
+    </div>
+    <div class="w-[calc(100%_-_118px)] [>p]:mb-0">
+      {{ description }}
+    </div>
+  {{ /entries }}
+</div>

@@ -1,0 +1,34 @@
+title: Firmengeschichte
+fields:
+  -
+    handle: entries
+    field:
+      type: replicator
+      display: Einträge
+      sets:
+        neue_setgruppe:
+          display: 'Neue Setgruppe'
+          sets:
+            entry:
+              display: Eintrag
+              instructions: 'Eintrag hinzufügen'
+              icon: text-formatting-initial-letter
+              fields:
+                -
+                  handle: periode
+                  field:
+                    type: text
+                    display: Periode
+                -
+                  handle: description
+                  field:
+                    buttons:
+                      - removeformat
+                      - anchor
+                    toolbar_mode: floating
+                    remove_empty_nodes: true
+                    link_collections:
+                      - pages
+                    container: assets
+                    type: bard
+                    display: Beschreibung

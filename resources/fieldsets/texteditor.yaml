@@ -1,0 +1,97 @@
+title: Texteditor
+fields:
+  -
+    handle: two_cols
+    field:
+      type: toggle
+      display: '2-spaltig?'
+  -
+    handle: text
+    field:
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - removeformat
+        - anchor
+        - lead
+      toolbar_mode: floating
+      remove_empty_nodes: true
+      link_collections:
+        - pages
+      container: assets
+      collapse: true
+      type: bard
+      display: Text
+      if:
+        two_cols: 'not true'
+  -
+    handle: text_left
+    field:
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - removeformat
+        - anchor
+        - lead
+      toolbar_mode: floating
+      remove_empty_nodes: true
+      link_collections:
+        - pages
+      container: assets
+      type: bard
+      display: 'Text (linke Spalte)'
+      if:
+        two_cols: 'equals true'
+      sets:
+        elements:
+          display: Inhalte
+          instructions: 'Elemente hinzufügen'
+          icon: addon-boxes-stack
+          sets:
+            history:
+              display: Firmengeschichte
+              instructions: 'Firmengeschichte hinzufügen'
+              icon: text-formatting-initial-letter
+              fields:
+                -
+                  import: history
+  -
+    handle: text_right
+    field:
+      buttons:
+        - h2
+        - h3
+        - bold
+        - italic
+        - unorderedlist
+        - removeformat
+        - anchor
+        - lead
+      toolbar_mode: floating
+      remove_empty_nodes: true
+      link_collections:
+        - pages
+      container: assets
+      type: bard
+      display: 'Text (rechte Spalte)'
+      if:
+        two_cols: 'equals true'
+      sets:
+        elements:
+          display: Inhalte
+          instructions: 'Elemente hinzufügen'
+          icon: addon-boxes-stack
+          sets:
+            history:
+              display: Firmengeschichte
+              instructions: 'Firmengeschichte hinzufügen'
+              icon: text-formatting-initial-letter
+              fields:
+                -
+                  import: history

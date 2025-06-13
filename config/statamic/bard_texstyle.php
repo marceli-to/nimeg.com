@@ -28,8 +28,8 @@ return [
             'name' => 'Lead',
             'ident' => 'L',
             'icon' => null,
-            'class' => 'font-normal leading-[1.3] text-xl md:text-2xl mb-40 md:mb-60',
-            'cp_css' => 'font-size: 1rem; font-weight: 500',
+            'class' => '!mb-50 lg:!mb-60',
+            'cp_css' => 'font-weight: 500',
             'cp_badge' => false,
         ],
 

@@ -1,46 +1,25 @@
-<figure>
+<figure class="{{ wrapperClass }}">
   <picture>
-
-    {{ if (breakpoints | in_array('2xl')) }}
-      <source media="(min-width: 1440px)" srcset="/assets/{{ image }}-2xl.avif" type="image/avif">
+    {{ if (sizes | in_array('2xl')) }}
+      <source media="(min-width: 1280px)" srcset="{{ glide:image preset="{{ preset ? '2xl-{{ preset }}-webp' : '2xl-webp' }}" }}" type="image/webp">
+      <source media="(min-width: 1280px)" srcset="{{ glide:image preset="{{ preset ? '2xl-{{ preset }}' : '2xl' }}" }}" type="image/jpeg">
     {{ /if }}
-    {{ if (breakpoints | in_array('xl')) }}
-      <source media="(min-width: 1280px)" srcset="/assets/{{ image }}-xl.avif" type="image/avif">
+    {{ if (sizes | in_array('xl')) }}
+      <source media="(min-width: 1024px)" srcset="{{ glide:image preset="{{ preset ? 'xl-{{ preset }}-webp' : 'xl-webp' }}" }}" type="image/webp">
+      <source media="(min-width: 1024px)" srcset="{{ glide:image preset="{{ preset ? 'xl-{{ preset }}' : 'xl' }}" }}" type="image/jpeg">
     {{ /if }}
-    {{ if (breakpoints | in_array('lg')) }}
-      <source media="(min-width: 1024px)" srcset="/assets/{{ image }}-lg.avif" type="image/avif">
+    {{ if (sizes | in_array('lg')) }}
+      <source media="(min-width: 768px)" srcset="{{ glide:image preset="{{ preset ? 'lg-{{ preset }}-webp' : 'lg-webp' }}" }}" type="image/webp">
+      <source media="(min-width: 768px)" srcset="{{ glide:image preset="{{ preset ? 'lg-{{ preset }}' : 'lg' }}" }}" type="image/jpeg">
     {{ /if }}
-    <source srcset="/assets/{{ image }}.avif" type="image/avif">
-
-    {{ if (breakpoints | in_array('2xl')) }}
-      <source media="(min-width: 1440px)" srcset="/assets/{{ image }}-2xl.webp" type="image/webp">
-    {{ /if }}
-    {{ if (breakpoints | in_array('xl')) }}
-      <source media="(min-width: 1280px)" srcset="/assets/{{ image }}-xl.webp" type="image/webp">
-    {{ /if }}
-    {{ if (breakpoints | in_array('lg')) }}
-      <source media="(min-width: 1024px)" srcset="/assets/{{ image }}-lg.webp" type="image/webp">
-    {{ /if }}
-    <source srcset="/assets/{{ image }}.webp" type="image/webp">
-
-    {{ if (breakpoints | in_array('2xl')) }}
-      <source media="(min-width: 1440px)" srcset="/assets/{{ image }}-2xl.jpg" type="image/jpeg">
-    {{ /if }}
-    {{ if (breakpoints | in_array('xl')) }}
-      <source media="(min-width: 1280px)" srcset="/assets/{{ image }}-xl.jpg" type="image/jpeg">
-    {{ /if }}
-    {{ if (breakpoints | in_array('lg')) }}
-      <source media="(min-width: 1024px)" srcset="/assets/{{ image }}-lg.jpg" type="image/jpeg">
-    {{ /if }}
-
+    <source srcset="{{ glide:image preset="{{ preset ? 'md-{{ preset }}-webp' : 'md-webp' }}" }}" />
     <img 
-      src="/assets/{{ image }}.jpg" 
-      alt="{{ alt }}" 
-      title="{{ alt }}" 
-      height="{{ height }}" 
-      width="{{ width }}"
-      class="block w-full h-auto {{ class }}"
+      src="{{ glide:image preset="{{ preset ? 'md-{{ preset }}' : 'md' }}" }}" 
+      alt="{{ alt ? alt : image:alt }}" 
+      title="{{ alt ? alt : image:alt }}" 
+      height="{{ image:height }}" 
+      width="{{ image:width }}"
+      class="block {{ class ?? '' }}"
       loading="lazy">
-
   </picture>
 </figure>

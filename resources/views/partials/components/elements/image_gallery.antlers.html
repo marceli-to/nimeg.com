@@ -1,0 +1,51 @@
+{{ partial:layout/container }}
+  <div class="grid grid-cols-12 gap-18">
+
+    {{ if number_images == 'one' }}
+      {{ partial:components/media/image 
+        wrapperClass="col-span-full"
+        :image="single_image" class="w-full h-auto" }}
+    {{ /if }}
+
+    {{ if number_images == 'two' }}
+
+      {{ if layout == 'portrait-landscape' }}
+        {{ partial:components/media/image 
+          :image="image_left" 
+          wrapperClass="col-span-full md:col-span-4"
+          class="w-full h-full object-cover" }}
+
+        {{ partial:components/media/image 
+          :image="image_right" 
+          wrapperClass="col-span-full md:col-span-8"
+          class="w-full h-full object-cover" }}
+      {{ /if }}
+
+      {{ if layout == 'landscape-portrait' }}
+        {{ partial:components/media/image 
+          :image="image_left" 
+          wrapperClass="col-span-full md:col-span-8"
+          class="w-full h-full object-cover" }}
+
+        {{ partial:components/media/image 
+          :image="image_right" 
+          wrapperClass="col-span-full md:col-span-4"
+          class="w-full h-full object-cover" }}
+      {{ /if }}
+
+      {{ if layout == 'square' }}
+        {{ partial:components/media/image 
+          :image="image_left" 
+          wrapperClass="col-span-full md:col-span-6"
+          class="w-full h-full object-cover" }}
+
+        {{ partial:components/media/image 
+          :image="image_right" 
+          wrapperClass="col-span-full md:col-span-6"
+          class="w-full h-full object-cover" }}
+      {{ /if }}
+
+    {{ /if }}
+    
+  </div>
+{{ /partial:layout/container }}

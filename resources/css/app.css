@@ -8,15 +8,42 @@
   @apply hidden;
 }
 
-main {
+main .container + .container {
+  @apply mt-60 lg:mt-80;
 }
 
-main p, main ul {
-  @apply mb-16;
+
+main p:not(:last-child), 
+main ul:not(:last-child) {
+  @apply mb-20 lg:mb-25;
+}
+
+main ul {
+  @apply list-[square] ml-18
+}
+
+main ul li {
+  @apply list-item pl-14 mb-5
+}
+
+main ul li p {
+  @apply inline
 }
 
 main a {
   @apply underline underline-offset-2 decoration-1 hover:no-underline;
+}
+
+main h2 {
+  @apply font-bold text-2xl leading-[1.28] mb-30
+}
+
+main h2:not(:first-of-type) {
+  @apply mt-60
+}
+
+main h3 {
+  @apply font-bold uppercase
 }
 
 strong {
