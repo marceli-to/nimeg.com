@@ -1,0 +1,70 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: image
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: Portrait
+          -
+            handle: firstname
+            field:
+              type: text
+              display: Vorname
+              validate:
+                - required
+          -
+            handle: name
+            field:
+              type: text
+              display: Name
+              validate:
+                - required
+          -
+            handle: function_position
+            field:
+              type: textarea
+              display: Funktion/Position
+          -
+            handle: phone
+            field:
+              type: text
+              display: Telefon
+              instructions: 'Wird nur auf der Kontaktseite ausgegeben.'
+              instructions_position: below
+          -
+            handle: mobile
+            field:
+              type: text
+              display: Mobile
+              instructions: 'Wird nur auf der Kontaktseite ausgegeben.'
+              instructions_position: below
+          -
+            handle: email
+            field:
+              type: text
+              display: E-Mail
+              instructions: 'Wird nur auf der Kontaktseite ausgegeben.'
+              instructions_position: below
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: false
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+title: Team

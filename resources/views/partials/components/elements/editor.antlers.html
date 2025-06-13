@@ -1,8 +1,12 @@
-{{ content }}
-  {{ if type == 'history' }}
-    {{ partial:components/elements/history }}
-  {{ /if }}
-  {{ if type == 'text' }}
-    {{ text }}
-  {{ /if }}
-{{ /content}}
+{{ if content | is_array }}
+  {{ content  }}
+    {{ if type == 'history' }}
+      {{ partial:components/elements/history }}
+    {{ /if }}
+    {{ if type == 'text' }}
+      {{ text }}
+    {{ /if }}
+  {{ /content }}
+{{ else }}
+  {{ content }}
+{{ /if }}

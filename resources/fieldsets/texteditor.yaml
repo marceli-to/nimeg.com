@@ -9,6 +9,7 @@ fields:
     handle: text
     field:
       buttons:
+        - h1
         - h2
         - h3
         - bold
@@ -31,6 +32,7 @@ fields:
     handle: text_left
     field:
       buttons:
+        - h1
         - h2
         - h3
         - bold
@@ -65,6 +67,7 @@ fields:
     handle: text_right
     field:
       buttons:
+        - h1
         - h2
         - h3
         - bold

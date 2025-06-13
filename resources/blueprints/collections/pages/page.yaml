@@ -46,6 +46,13 @@ tabs:
                       fields:
                         -
                           import: image_gallery
+                    team_listing:
+                      display: Team
+                      instructions: 'Team anzeigen'
+                      icon: media-image-picture-orientation
+                      fields:
+                        -
+                          import: team_listing
   seo:
     display: SEO
     sections:

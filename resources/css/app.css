@@ -34,7 +34,7 @@ main a {
   @apply underline underline-offset-2 decoration-1 hover:no-underline;
 }
 
-main h2 {
+main h1, h2 {
   @apply font-bold text-2xl leading-[1.28] mb-30
 }
 
