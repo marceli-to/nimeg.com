@@ -6,6 +6,9 @@
     {{ if type == 'text' }}
       {{ text }}
     {{ /if }}
+    {{ if type == 'job_listing' }}
+      {{ partial:jobs/listing }}
+    {{ /if }}
   {{ /content }}
 {{ else }}
   {{ content }}

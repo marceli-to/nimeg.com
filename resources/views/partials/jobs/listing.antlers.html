@@ -1,0 +1,9 @@
+{{ collection from="jobs" as="jobs" }}
+  {{ partial:components/accordion/wrapper }}
+    {{ jobs }}
+      {{ partial:components/accordion/item index="{{ index }}" }}
+        {{ text }}
+      {{ /partial:components/accordion/item }}
+    {{ /jobs }}
+  {{ /partial:components/accordion/wrapper }}
+{{ /collection }}

@@ -63,7 +63,7 @@ fields:
               fields:
                 -
                   import: history
-            jobs:
+            job_listing:
               display: Jobs
               instructions: 'Jobs anzeigen'
               icon: file-content-list
@@ -105,7 +105,7 @@ fields:
               fields:
                 -
                   import: history
-            jobs:
+            job_listing:
               display: Jobs
               instructions: 'Jobs anzeigen'
               icon: file-content-list
