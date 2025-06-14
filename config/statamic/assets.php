@@ -67,7 +67,7 @@ return [
         |
         */
 
-        'cache' => true,
+        'cache' => false,
         'cache_path' => public_path('img'),
 
         /*
@@ -116,9 +116,11 @@ return [
           '2xl' => ['w' => 1680, 'h' => 10000, 'q' => 90, 'fit' => 'contain'],
           '3xl' => ['w' => 2000, 'h' => 10000, 'q' => 90, 'fit' => 'contain'],
 
-          // Gallery Thumbnails
-          'gallery-webp' => ['w' => 768, 'h' => 480, 'q' => 90, 'fit' => 'crop_focal', 'fm' => 'webp'],
-          'gallery' => ['w' => 768, 'h' => 480, 'q' => 90, 'fit' => 'crop_focal'],
+          // Team
+          'team-lg-webp' => ['w' => 648, 'h' => 790, 'q' => 90, 'fit' => 'crop_focal', 'fm' => 'webp'],
+          'team-lg' => ['w' => 648, 'h' => 790, 'q' => 90, 'fit' => 'crop_focal'],
+          'team-sm-webp' => ['w' => 648, 'h' => 648, 'q' => 90, 'fit' => 'crop_focal', 'fm' => 'webp'],
+          'team-sm' => ['w' => 648, 'h' => 648, 'q' => 90, 'fit' => 'crop_focal'],
           
           'max_upload_size' => ['w' => 2500, 'h' => 2500, 'fit' => 'max'],
 

@@ -1,7 +1,3 @@
-{{ if type == 'editor' }}
-  {{ partial:components/editor }}
-{{ /if }}
-
 {{ if type == 'intro_visual' }}
   {{ partial:components/elements/intro_visual :image="image" }}
 {{ /if }}
@@ -12,6 +8,10 @@
 
 {{ if type == 'image_gallery' }}
   {{ partial:components/elements/image_gallery }}
+{{ /if }}
+
+{{ if type == 'team_listing' }}
+  {{ partial:components/team/listing }}
 {{ /if }}
   
 

@@ -1,0 +1,21 @@
+<figure class="relative group">
+  <picture>
+    <source media="(min-width: 1024px)" srcset="{{ glide:image preset="team-lg-webp" }}" type="image/webp">
+    <source media="(min-width: 1024px)" srcset="{{ glide:image preset="team-lg" }}" type="image/jpeg">
+    <source srcset="{{ glide:image preset="team-sm-webp" }}" />
+    <img 
+      src="{{ glide:image preset="team-sm" }}" 
+      alt="{{ firstname }} {{ lastname }}" 
+      title="{{ firstname }} {{ lastname }}" 
+      height="{{ image:height }}" 
+      width="{{ image:width }}"
+      class="block w-full h-auto {{ class ?? '' }}"
+      loading="lazy">
+  </picture>
+  <figcaption class="pt-15 lg:opacity-0 lg:absolute lg:inset-15 lg:bg-white/90 lg:flex lg:flex-col lg:justify-end lg:gap-y-15 group-hover:opacity-100 transition-all duration-100">
+    <div class="lg:pb-20 lg:pl-20">
+      <h3 class="capitalize">{{ firstname }} {{ name }}</h3>
+      <p>{{ function_position | nl2br }}</p>
+    </div>
+  </figcaption>
+</figure>
