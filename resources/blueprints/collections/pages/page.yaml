@@ -53,6 +53,13 @@ tabs:
                       fields:
                         -
                           import: team_listing
+                    jobs:
+                      display: Jobs
+                      instructions: 'Jobs anzeigen'
+                      icon: file-content-list
+                      fields:
+                        -
+                          import: job_listing
   seo:
     display: SEO
     sections:

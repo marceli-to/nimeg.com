@@ -63,6 +63,13 @@ fields:
               fields:
                 -
                   import: history
+            jobs:
+              display: Jobs
+              instructions: 'Jobs anzeigen'
+              icon: file-content-list
+              fields:
+                -
+                  import: job_listing
   -
     handle: text_right
     field:
@@ -98,3 +105,10 @@ fields:
               fields:
                 -
                   import: history
+            jobs:
+              display: Jobs
+              instructions: 'Jobs anzeigen'
+              icon: file-content-list
+              fields:
+                -
+                  import: job_listing

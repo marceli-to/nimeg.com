@@ -19,11 +19,11 @@ main ul:not(:last-child) {
 }
 
 main ul {
-  @apply list-[square] ml-18
+  @apply list-[square] ml-20
 }
 
 main ul li {
-  @apply list-item pl-14 mb-5
+  @apply list-item pl-10 mb-5
 }
 
 main ul li p {
@@ -31,7 +31,7 @@ main ul li p {
 }
 
 main a {
-  @apply underline underline-offset-2 decoration-1 hover:no-underline;
+  @apply underline underline-offset-6 decoration-1 hover:no-underline;
 }
 
 main h1, h2 {
