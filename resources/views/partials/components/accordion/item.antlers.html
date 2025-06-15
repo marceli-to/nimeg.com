@@ -21,9 +21,9 @@
     :class="{ 'bg-white': open, 'bg-lumora': !open }"
     @click="toggle()">
 
-    <div class="w-full flex items-center justify-between py-10 md:py-15 xl:py-20">
+    <div class="w-full flex items-center justify-between py-10 xl:py-15">
 
-      <h3 class="capitalize">{{ title }}</h3>
+      <h3 class="capitalize text-left">{{ title }}</h3>
 
       <span :class="{ 'block': !open, 'hidden': open }">
         {{ partial:icons/chevron-down }}
