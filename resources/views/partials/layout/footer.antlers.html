@@ -1,9 +1,9 @@
 <footer class="bg-granite text-white">
   {{ partial:layout/container class="py-60 md:pt-60 md:pb-90" }}
 
-  <div class="md:grid md:grid-cols-8 lg:grid-cols-12 md:gap-x-18">
+  <div class="md:grid md:grid-cols-8 xl:grid-cols-12 md:gap-x-18">
 
-    <div class="md:col-span-3 xl:col-span-2 mb-40 md:mb-0">
+    <div class="md:col-span-4 xl:col-span-3 mb-40 md:mb-0">
       <address class="not-italic leading-[1.55]">
         nimeg ag<br>
         Täfernstrasse 14a<br>
@@ -13,7 +13,7 @@
       </address>
     </div>
     
-    <div class="md:col-span-5 md:flex md:flex-col md:justify-between">
+    <div class="md:col-span-4 md:flex md:flex-col md:justify-between">
       <a
         href="https://www.linkedin.com/company/nimeg-ag/"
         title="nimeg ag auf LinkedIn">
@@ -31,14 +31,14 @@
               </a>
             </li>
           {{ /nav:footer }}
-          <li class="lg:hidden">
+          <li class="xl:hidden">
             &copy; {{ now | format('Y') }} nimeg ag
           </li>
         </ul>
       </nav>
     </div>
 
-    <div class="hidden lg:col-span-4 xl:col-span-5 lg:flex lg:flex-col lg:justify-end lg:items-end">
+    <div class="hidden xl:col-span-5 xl:flex xl:flex-col xl:justify-end xl:items-end">
       &copy; {{ now | format('Y') }} nimeg ag
     </div>
 

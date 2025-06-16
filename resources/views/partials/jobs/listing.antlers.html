@@ -1,9 +1,22 @@
+<div class="mt-50 xl:mt-80">
 {{ collection from="jobs" as="jobs" }}
   {{ partial:components/accordion/wrapper }}
     {{ jobs }}
       {{ partial:components/accordion/item index="{{ index }}" }}
-        {{ text }}
+        <div class="text-sm text-pretty">
+          {{ text }}
+          {{ if pdf }}
+            <a 
+              href="{{ pdf }}" 
+              target="_blank" 
+              class="font-bold no-underline hover:underline underline-offset-4 decoration-2"
+              title="Download Job-Profil">
+              Download Job-Profil
+            </a>
+          {{ /if }}
+        </div>
       {{ /partial:components/accordion/item }}
     {{ /jobs }}
   {{ /partial:components/accordion/wrapper }}
 {{ /collection }}
+</div>

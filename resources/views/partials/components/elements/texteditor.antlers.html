@@ -1,21 +1,21 @@
 {{ partial:layout/container }}
   {{ if two_cols }}
-    <div class="lg:grid lg:grid-cols-12 lg:gap-x-18 mt-60">
+    <div class="xl:grid xl:grid-cols-12 xl:gap-x-18 mt-60">
       {{ if text_left }}
-        <article class="lg:col-span-6 {{ text_right ? 'mb-20 lg:mb-0' : ''}}">
+        <article class="xl:col-span-6 {{ text_right ? 'mb-20 xl:mb-0' : ''}}">
           {{ partial:components/elements/editor :content="text_left" }}
         </article>
       {{ /if }}
       {{ if text_right }} 
-        <article class="lg:col-span-6 {{ text_left ? 'lg:mt-2' : ''}}">
+        <article class="xl:col-span-6 {{ text_left ? 'xl:mt-2' : ''}}">
           {{ partial:components/elements/editor :content="text_right" }}
         </article>
       {{ /if }}
     </div>
   {{ else }}
-    <div class="lg:grid lg:grid-cols-12 lg:gap-x-18">
+    <div class="xl:grid xl:grid-cols-12 xl:gap-x-18">
       {{ if text }}
-        <article class="lg:col-span-8 xl:col-span-6">
+        <article class="xl:col-span-6">
           {{ partial:components/elements/editor :content="text" }}
         </article>
       {{ /if }}

@@ -33,6 +33,16 @@ return [
             'cp_badge' => false,
         ],
 
+        'intro' => [
+          'type' => 'paragraph',
+          'name' => 'Intro',
+          'ident' => 'I',
+          'icon' => null,
+          'class' => 'text-md md:text-xl leading-[1.4]',
+          'cp_css' => 'font-size: 1.35rem',
+          'cp_badge' => false,
+      ],
+
         // 'brand' => [
         //     'type' => 'span',
         //     'name' => 'Brand Text',

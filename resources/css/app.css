@@ -9,13 +9,13 @@
 }
 
 main .container + .container {
-  @apply mt-60 lg:mt-80;
+  @apply mt-60 xl:mt-80;
 }
 
 
 main p:not(:last-child), 
 main ul:not(:last-child) {
-  @apply mb-20 lg:mb-25;
+  @apply mb-20 xl:mb-25;
 }
 
 main ul {
