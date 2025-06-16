@@ -1,6 +1,6 @@
 {{ partial:layout/container }}
   {{ if two_cols }}
-    <div class="xl:grid xl:grid-cols-12 xl:gap-x-18 mt-60">
+    <div class="xl:grid xl:grid-cols-12 xl:gap-x-16 mt-60">
       {{ if text_left }}
         <article class="xl:col-span-6 {{ text_right ? 'mb-20 xl:mb-0' : ''}}">
           {{ partial:components/elements/editor :content="text_left" }}
@@ -13,7 +13,7 @@
       {{ /if }}
     </div>
   {{ else }}
-    <div class="xl:grid xl:grid-cols-12 xl:gap-x-18">
+    <div class="xl:grid xl:grid-cols-12 xl:gap-x-16">
       {{ if text }}
         <article class="xl:col-span-6">
           {{ partial:components/elements/editor :content="text" }}

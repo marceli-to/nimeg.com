@@ -1,0 +1,34 @@
+title: 'Info Panels'
+fields:
+  -
+    handle: panel
+    field:
+      type: replicator
+      display: Panel
+      sets:
+        neue_setgruppe:
+          display: 'Neue Setgruppe'
+          sets:
+            panel:
+              display: Panel
+              instructions: 'Panel hinzufügen'
+              icon: layout-grid-dots
+              fields:
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Titel
+                -
+                  handle: text
+                  field:
+                    buttons:
+                      - bold
+                      - italic
+                      - unorderedlist
+                      - removeformat
+                      - anchor
+                    toolbar_mode: floating
+                    remove_empty_nodes: true
+                    type: bard
+                    display: Text

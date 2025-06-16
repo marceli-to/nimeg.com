@@ -60,6 +60,16 @@ tabs:
                       fields:
                         -
                           import: job_listing
+                special_elements:
+                  display: 'Special Elements'
+                  sets:
+                    info_panels:
+                      display: 'Info Panels'
+                      instructions: 'Info Panels hinzufügen'
+                      icon: layout-grid-dots
+                      fields:
+                        -
+                          import: info_panels
   seo:
     display: SEO
     sections:
