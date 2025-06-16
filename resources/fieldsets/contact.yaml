@@ -1,0 +1,47 @@
+title: Kontakt
+fields:
+  -
+    handle: lead
+    field:
+      buttons:
+        - bold
+        - unorderedlist
+        - removeformat
+        - anchor
+      toolbar_mode: floating
+      remove_empty_nodes: true
+      type: bard
+      display: Lead
+      width: 50
+  -
+    handle: contact_person
+    field:
+      collections:
+        - team
+      type: entries
+      display: Kontaktpersonen
+      width: 50
+  -
+    handle: access
+    field:
+      buttons:
+        - h2
+        - h3
+        - bold
+        - unorderedlist
+        - removeformat
+        - anchor
+      toolbar_mode: floating
+      remove_empty_nodes: true
+      container: assets
+      type: bard
+      display: Anfahrt
+      width: 50
+  -
+    handle: map
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: Plan
+      width: 50

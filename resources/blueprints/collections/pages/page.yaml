@@ -70,6 +70,13 @@ tabs:
                       fields:
                         -
                           import: info_panels
+                    contact:
+                      display: Kontakt
+                      instructions: 'Kontaktinformationen hinzufügen'
+                      icon: addon-boxes-stack
+                      fields:
+                        -
+                          import: contact
   seo:
     display: SEO
     sections:

@@ -11,6 +11,7 @@ tabs:
               container: assets
               type: assets
               display: Portrait
+              folder: team
           -
             handle: firstname
             field:
@@ -29,7 +30,12 @@ tabs:
             handle: function_position
             field:
               type: textarea
-              display: Funktion/Position
+              display: 'Funktion/Position (Team)'
+          -
+            handle: funktion_position_contact
+            field:
+              type: textarea
+              display: 'Funktion/Position (Kontakt)'
           -
             handle: phone
             field:
@@ -67,4 +73,14 @@ tabs:
               type: slug
               localizable: true
               validate: 'max:200'
+              show_regenerate: true
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - team
+              max_items: 1
+              listable: false
+              localizable: true
 title: Team
