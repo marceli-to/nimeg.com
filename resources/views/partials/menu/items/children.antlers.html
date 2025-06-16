@@ -2,7 +2,6 @@
   <a 
     href="{{ url }}" 
     class="block w-full leading-none text-md xl:text-sm py-6 xl:py-8 hover:underline underline-offset-8 decoration-1 {{ is_current || is_parent ? 'font-bold' : '' }}"
-    x-on:click="menu = false" 
     target="{{ is_external ? '_blank' : '_self' }}"
     title="{{ title }}">
     {{ title }}

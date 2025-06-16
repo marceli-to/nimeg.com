@@ -7,7 +7,6 @@
     <a 
       href="{{ url }}" 
       class="block leading-none font-bold text-2xl md:text-3xl xl:text-lg hover:underline underline-offset-10 xl:underline-offset-8 decoration-3 {{ is_current || is_parent ? 'underline' : '' }}"
-      x-on:click="menu = false" 
       target="{{ is_external ? '_blank' : '_self' }}"
       title="{{ title }}">
       {{ title }}
@@ -38,7 +37,7 @@
       x-show="subMenuId === '{{ id }}' || '{{ is_current || is_parent }}'"
       x-cloak
       id="submenu-{{ id }}"
-      class="flex flex-col gap-y-5 pt-15 xl:p-15 xl:pr-30 xl:absolute xl:top-full xl:-left-15 xl:hidden xl:group-hover:!flex xl:bg-white xl:shadow-md">
+      class="flex flex-col gap-y-5 pt-25 xl:p-15 xl:pr-30 xl:absolute xl:top-full xl:-left-15 xl:hidden xl:group-hover:!flex xl:bg-white xl:shadow-md">
       {{ children }}
         {{ partial:menu/items/children }}
       {{ /children }}
