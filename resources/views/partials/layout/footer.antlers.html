@@ -5,20 +5,46 @@
 
     <div class="md:col-span-4 xl:col-span-3 mb-40 md:mb-0">
       <address class="not-italic leading-[1.55]">
-        nimeg ag<br>
-        Täfernstrasse 14a<br>
-        5405 Baden Dättwil <br>
-        <a href="mailto:info@nimeg.com" title="Schreiben Sie uns" class="no-underline hover:underline decoration-1 underline-offset-4" target="_blank">info@nimeg.com</a><br>
-        <a href="tel:+41628735025" title="Rufen Sie uns an" class="no-underline hover:underline decoration-1 underline-offset-4" target="_blank">+41 62 873 50 25</a>
+        <div>
+          {{ if contact_information:address }}
+            {{ contact_information:address | nl2br }}
+          {{ /if }}
+        </div>
+        {{ if contact_information:email }}
+          <div>
+            <a 
+              href="mailto:{{ contact_information:email }}" 
+              title="Schreiben Sie uns" 
+              class="no-underline hover:underline decoration-1 underline-offset-4" 
+              target="_blank">
+              {{ contact_information:email }}
+            </a>
+          </div>
+        {{ /if }}
+        {{ if contact_information:phone }}
+          <div>
+            <a 
+              href="tel:{{ contact_information:phone }}" 
+              title="Rufen Sie uns an" 
+              class="no-underline hover:underline decoration-1 underline-offset-4" 
+              target="_blank">
+              {{ contact_information:phone }}
+            </a>
+          </div>
+        {{ /if }}
       </address>
     </div>
     
     <div class="md:col-span-4 md:flex md:flex-col md:justify-between">
-      <a
-        href="https://www.linkedin.com/company/nimeg-ag/"
-        title="nimeg ag auf LinkedIn">
-        {{ partial:icons/linkedin }}
-      </a>
+      {{ if contact_information:linkedin_url }}
+        <a
+          href="{{ contact_information:linkedin_url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="nimeg ag auf LinkedIn">
+          {{ partial:icons/linkedin }}
+        </a>
+      {{ /if }}
       <nav class="mt-20 md:mt-0 leading-[1.55]">
         <ul>
           {{ nav:footer }}

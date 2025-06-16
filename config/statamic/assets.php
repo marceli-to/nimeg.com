@@ -117,10 +117,10 @@ return [
           '3xl' => ['w' => 2000, 'h' => 10000, 'q' => 90, 'fit' => 'contain'],
 
           // Team
-          'team-lg-webp' => ['w' => 648, 'h' => 790, 'q' => 90, 'fit' => 'crop_focal', 'fm' => 'webp'],
-          'team-lg' => ['w' => 648, 'h' => 790, 'q' => 90, 'fit' => 'crop_focal'],
-          'team-sm-webp' => ['w' => 648, 'h' => 648, 'q' => 90, 'fit' => 'crop_focal', 'fm' => 'webp'],
-          'team-sm' => ['w' => 648, 'h' => 648, 'q' => 90, 'fit' => 'crop_focal'],
+          'team-lg-webp' => ['w' => 1000, 'h' => 1219, 'q' => 90, 'fit' => 'crop_focal', 'fm' => 'webp'],
+          'team-lg' => ['w' => 1000, 'h' => 1219, 'q' => 90, 'fit' => 'crop_focal'],
+          'team-sm-webp' => ['w' => 900, 'h' => 900, 'q' => 90, 'fit' => 'crop_focal', 'fm' => 'webp'],
+          'team-sm' => ['w' => 900, 'h' => 900, 'q' => 90, 'fit' => 'crop_focal'],
           
           'max_upload_size' => ['w' => 2500, 'h' => 2500, 'fit' => 'max'],
 

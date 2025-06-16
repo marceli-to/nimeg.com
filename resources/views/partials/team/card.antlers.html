@@ -1,9 +1,15 @@
-<figure class="relative group">
+<figure class="relative group {{ class }}">
   {{ if image !== null }}
     <picture>
-      <source media="(min-width: 1024px)" srcset="{{ glide:image preset="team-lg-webp" }}" type="image/webp">
-      <source media="(min-width: 1024px)" srcset="{{ glide:image preset="team-lg" }}" type="image/jpeg">
-      <source srcset="{{ glide:image preset="team-sm-webp" }}" />
+      {{ if isContact }}
+        <source media="(min-width: 1280px)" srcset="{{ glide:image preset="team-lg-webp" }}" type="image/webp">
+        <source media="(min-width: 1280px)" srcset="{{ glide:image preset="team-lg" }}" type="image/jpeg">
+        <source srcset="{{ glide:image preset="team-sm-webp" }}" />
+      {{ else }}
+        <source media="(min-width: 1024px)" srcset="{{ glide:image preset="team-lg-webp" }}" type="image/webp">
+        <source media="(min-width: 1024px)" srcset="{{ glide:image preset="team-lg" }}" type="image/jpeg">
+        <source srcset="{{ glide:image preset="team-sm-webp" }}" />
+      {{ /if }}
       <img
         src="{{ glide:image preset="team-sm" }}" 
         alt="{{ firstname }} {{ lastname }}" 
@@ -19,7 +25,40 @@
   <figcaption class="pt-15 xl:opacity-0 xl:absolute xl:inset-15 xl:bg-white/90 xl:flex xl:flex-col xl:justify-end xl:gap-y-15 group-hover:opacity-100 transition-all duration-100">
     <div class="xl:pb-20 xl:pl-20">
       <h3 class="capitalize">{{ firstname }} {{ name }}</h3>
-      <p>{{ function_position | nl2br }}</p>
+      {{ if isContact }}
+        <p>{{ function_position_contact | nl2br }}</p>
+        <p>
+          {{ if phone }}
+            <a 
+              href="tel:{{ phone }}" 
+              title="Rufen Sie uns an" 
+              class="block no-underline hover:underline decoration-1 underline-offset-4" 
+              target="_blank">
+              T: {{ phone }}
+            </a>
+          {{ /if }}
+          {{ if mobile }}
+            <a 
+              href="tel:{{ mobile }}" 
+              title="Rufen Sie uns an" 
+              class="block no-underline hover:underline decoration-1 underline-offset-4" 
+              target="_blank">
+              M: {{ mobile }}
+            </a>
+          {{ /if }}
+          {{ if email }}
+            <a 
+              href="mailto:{{ email }}" 
+              title="Schreiben Sie uns" 
+              class="block no-underline hover:underline decoration-1 underline-offset-4" 
+              target="_blank">
+              {{ email }}
+            </a>
+          {{ /if }}
+        </p>
+      {{ else }}
+        <p>{{ function_position | nl2br }}</p>
+      {{ /if }}
     </div>
   </figcaption>
 </figure>

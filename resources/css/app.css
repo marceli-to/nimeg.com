@@ -12,6 +12,13 @@ main .container + .container {
   @apply mt-60 xl:mt-80;
 }
 
+main > .container:first-child {
+  @apply mt-60 xl:mt-80;
+}
+
+main .visual + .container {
+  @apply mt-60 xl:mt-80;
+}
 
 main p:not(:last-child), 
 main ul:not(:last-child) {
@@ -36,6 +43,10 @@ main a {
 
 main h1, h2 {
   @apply font-bold text-2xl leading-[1.28] mb-30
+}
+
+main h1 {
+  @apply text-2xl md:text-3xl xl:text-4xl
 }
 
 main h2:not(:first-of-type) {

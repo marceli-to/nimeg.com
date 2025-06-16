@@ -32,7 +32,7 @@ tabs:
               type: textarea
               display: 'Funktion/Position (Team)'
           -
-            handle: funktion_position_contact
+            handle: function_position_contact
             field:
               type: textarea
               display: 'Funktion/Position (Kontakt)'

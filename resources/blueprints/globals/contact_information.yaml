@@ -1,0 +1,26 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: address
+            field:
+              type: textarea
+              display: Adresse
+          -
+            handle: phone
+            field:
+              type: text
+              display: Telefon
+          -
+            handle: email
+            field:
+              type: text
+              display: E-Mail
+          -
+            handle: linkedin_url
+            field:
+              type: text
+              display: 'LinkedIn Profil'
