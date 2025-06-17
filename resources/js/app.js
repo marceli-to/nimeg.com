@@ -8,3 +8,4 @@ Alpine.start();
 
 import './bootstrap';
 import './modules/filter';
+import './modules/lightbox';

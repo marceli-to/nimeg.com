@@ -17,8 +17,8 @@
     "vue-axios": "^3.4.1"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.36",
     "@vitejs/plugin-vue": "^4.6.2",
-    "@fancyapps/ui": "^5.0.22",
     "alpinejs": "^3.13.8",
     "swiper": "^9.1.0"
   }

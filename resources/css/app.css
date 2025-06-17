@@ -61,4 +61,14 @@ strong {
   @apply font-bold;
 }
 
+.fancybox__backdrop {
+  @apply !bg-sky/80
+}
+.f-button {
+  @apply !bg-transparent
+}
 
+.fancybox__content {
+  @apply !p-50
+}
+  
