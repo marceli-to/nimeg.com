@@ -30,7 +30,7 @@ export default {
       },
 
       fontFamily: {
-        'source-sans': ['Source Sans 3', ...defaultTheme.fontFamily.sans],
+        'source-sans': ['"Source Sans 3"', ...defaultTheme.fontFamily.sans],
       },
 
       fontSize: {
