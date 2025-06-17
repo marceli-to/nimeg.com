@@ -26,8 +26,8 @@
     <div class="xl:pb-20 xl:px-20">
       <h3 class="capitalize">{{ firstname }} {{ name }}</h3>
       {{ if isContact }}
-        <p class="leading-[1.3]">{{ function_position_contact | nl2br }}</p>
-        <p class="leading-[1.3]">
+        <p class="leading-[1.35]">{{ function_position_contact | nl2br }}</p>
+        <p class="leading-[1.35]">
           {{ if phone }}
             <a 
               href="tel:{{ phone }}" 
@@ -57,7 +57,7 @@
           {{ /if }}
         </p>
       {{ else }}
-        <p class="leading-[1.3]">
+        <p class="leading-[1.35]">
           {{ function_position | nl2br }}
         </p>
       {{ /if }}
