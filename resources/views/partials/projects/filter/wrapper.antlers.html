@@ -1,7 +1,24 @@
-<div class="flex flex-wrap gap-8 xl:gap-12 w-full">
+<div class="hidden xl:flex flex-wrap gap-8 xl:gap-12 w-full">
   {{ taxonomy:tags }}
     {{ if entries }}
       {{ partial:projects/filter/pill }}
     {{ /if }}
   {{ /taxonomy:tags }}
+</div>
+
+<div class="relative inline-block xl:hidden">
+  <select 
+    name="tags" 
+    data-filter-select
+    class="appearance-none !bg-none border border-granite !ring-0 focus:border-granite rounded-full py-12 pl-24 pr-40 max-w-[164px]">
+    <option value="null">Kategorie</option>
+    {{ taxonomy:tags }}
+      {{ if entries }}
+        <option value="{{ slug }}">{{ title }}</option>
+      {{ /if }}
+    {{ /taxonomy:tags }}
+  </select>
+  <div class="pointer-events-none absolute top-23 right-24 w-12 flex items-center">
+    {{ partial:icons/chevron-down class="shrink-0 w-12 h-auto" }}
+  </div>
 </div>
