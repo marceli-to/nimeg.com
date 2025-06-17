@@ -60,6 +60,13 @@ tabs:
                       fields:
                         -
                           import: job_listing
+                    projects:
+                      display: Projekte
+                      instructions: 'Projekte anzeigen'
+                      icon: file-content-list
+                      fields:
+                        -
+                          import: project_listing
                 special_elements:
                   display: 'Special Elements'
                   sets:

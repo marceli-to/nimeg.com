@@ -1,0 +1,63 @@
+{{ partial:layout/container }}
+  <div class="flex flex-col gap-y-30 xl:gap-y-45">
+    <a 
+      href="/projekte"
+      title="zurück zur Projekt-Übersicht"
+      class="inline-flex items-center gap-x-10 leading-none w-auto no-underline">
+      {{ partial:icons/chevron-left class="block w-7 h-auto mt-2" }}
+      <span>zurück zur Projekt-Übersicht</span>
+    </a>
+
+    <h1 class="text-2xl md:text-3xl !mb-0">
+      {{ title }}
+    </h1>
+
+    <div class="flex flex-col gap-y-30 xl:grid xl:grid-cols-12 xl:gap-x-16">
+      {{ if text }}
+        <div class="xl:col-span-6 xl:pr-60">
+          {{ text }}
+        </div>
+      {{ /if }}
+
+      <div class="flex flex-col md:flex-row md:flex-wrap xl:col-span-6 gap-y-30">
+
+        {{ if tags }}
+          <div class="md:order-1 md:w-1/2 md:pr-8">
+            <h2 class="text-sm mb-0">
+              Leistungen
+            </h2>
+            {{ tags }}
+              <div>{{ title }}</div>
+            {{ /tags }}
+
+            {{ if periode }}
+            <div class="hidden xl:block xl:mt-40">
+              <h2 class="text-sm mb-0">
+                Jahr
+              </h2>
+              {{ periode }}
+            </div>
+          {{ /if }}
+
+          </div>
+        {{ /if }}
+
+        {{ if periode }}
+          <div class="md:order-3 md:w-1/2 xl:hidden">
+            <h2 class="text-sm mb-0">
+              Jahr
+            </h2>
+            {{ periode }}
+          </div>
+        {{ /if }}
+
+        {{ if credits }}
+          <div class="md:order-2 md:w-1/2 md:pl-8">
+            {{ credits }}
+          </div>
+        {{ /if }}
+
+      </div>
+    </div>
+  </div>
+{{ /partial:layout/container }}

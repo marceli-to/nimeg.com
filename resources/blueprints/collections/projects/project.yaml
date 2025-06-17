@@ -1,0 +1,109 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: text
+            field:
+              buttons:
+                - h3
+                - bold
+                - italic
+                - unorderedlist
+                - removeformat
+                - anchor
+                - lead
+                - intro
+              toolbar_mode: floating
+              remove_empty_nodes: true
+              link_collections:
+                - projects
+              container: assets
+              type: bard
+              display: Text
+          -
+            handle: periode
+            field:
+              type: text
+              display: Zeitraum
+          -
+            handle: credits
+            field:
+              buttons:
+                - bold
+                - italic
+                - unorderedlist
+                - removeformat
+                - anchor
+              toolbar_mode: floating
+              remove_empty_nodes: true
+              type: bard
+              display: Credits
+          -
+            handle: tags
+            field:
+              type: terms
+              taxonomies:
+                - tags
+              display: Tags
+              mode: select
+  media:
+    display: Medien
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            handle: preview_image
+            field:
+              max_files: 1
+              container: assets
+              folder: projekte
+              type: assets
+              display: Vorschau
+          -
+            handle: gallery_images
+            field:
+              container: assets
+              type: assets
+              display: Galerie
+              folder: projekte
+  seo:
+    display: SEO
+    sections:
+      -
+        display: 'Neuer Abschnitt'
+        fields:
+          -
+            import: seo
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+              show_regenerate: true
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - projects
+              max_items: 1
+              listable: false
+              localizable: true
+title: Projekte

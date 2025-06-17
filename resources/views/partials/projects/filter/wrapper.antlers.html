@@ -1,0 +1,7 @@
+<div class="flex flex-wrap gap-8 xl:gap-12 w-full">
+  {{ taxonomy:tags }}
+    {{ if entries }}
+      {{ partial:projects/filter/pill }}
+    {{ /if }}
+  {{ /taxonomy:tags }}
+</div>

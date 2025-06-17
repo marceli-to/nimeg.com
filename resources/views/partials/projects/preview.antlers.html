@@ -1,0 +1,31 @@
+<figure 
+  class="md:col-span-6 xl:col-span-4 relative group"
+  data-filter-tags="{{ tags }}{{ slug }}{{ if !last }},{{/if}}{{ /tags }}">
+  <a 
+    href="{{ url }}"
+    title="{{ title }}"
+    class="block group no-underline">
+
+    <picture>
+      <source media="(min-width: 1024px)" srcset="{{ glide:preview_image preset="project-preview-lg-webp" }}" type="image/webp">
+      <source media="(min-width: 1024px)" srcset="{{ glide:preview_image preset="project-preview-lg" }}" type="image/jpeg">
+      <source srcset="{{ glide:preview_image preset="project-preview-sm-webp" }}" />
+      <img
+        src="{{ glide:preview_image preset="project-preview-sm" }}" 
+        alt="{{ preview_image:alt }}" 
+        title="{{ preview_image:alt }}" 
+        height="{{ preview_image:height }}" 
+        width="{{ preview_image:width }}"
+        class="block w-full h-auto {{ class ?? '' }} group-hover:opacity-75 transition-opacity duration-150"
+        loading="lazy">
+    </picture>
+
+    <figcaption class="mt-15">
+      <h2 class="text-sm mb-0">
+        {{ title }}
+      </h2>
+      {{ periode }}
+    </figcaption>
+
+  </a>
+</figure>

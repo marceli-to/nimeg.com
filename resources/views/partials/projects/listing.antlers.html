@@ -1,0 +1,13 @@
+{{ partial:layout/container }}
+  <div x-data="{ filter: false }">
+    {{ partial:projects/filter/wrapper }}
+    <div 
+      class="mt-25 md:mt-30 xl:mt-40 flex flex-col gap-y-24 md:grid md:grid-cols-12 md:gap-x-16">
+      {{ collection from="projects" as="projects" }}
+        {{ projects }}
+          {{ partial:projects/preview }}
+        {{ /projects }}
+      {{ /collection }}
+    </div>
+  </div>
+{{ /partial:layout/container }}
