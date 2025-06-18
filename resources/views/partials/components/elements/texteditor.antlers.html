@@ -1,6 +1,6 @@
 {{ partial:layout/container }}
   {{ if two_cols }}
-    <div class="xl:grid xl:grid-cols-12 xl:gap-x-16">
+    <div class="xl:grid xl:grid-cols-12 xl:gap-x-32">
       {{ if text_left }}
         <article class="xl:col-span-6 {{ text_right ? 'mb-20 xl:mb-0' : ''}}">
           {{ partial:components/elements/editor :content="text_left" }}

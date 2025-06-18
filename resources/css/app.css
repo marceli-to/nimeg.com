@@ -38,7 +38,7 @@ main ul li p {
 }
 
 main a {
-  @apply underline underline-offset-6 decoration-1 hover:no-underline;
+  @apply underline underline-offset-4 decoration-1 hover:no-underline;
 }
 
 main h1, h2 {

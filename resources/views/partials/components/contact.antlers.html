@@ -1,6 +1,6 @@
 {{ partial:layout/container class="contact" }}
   <h1>Kontakt</h1>
-  <div class="xl:grid xl:grid-cols-12 xl:gap-16">
+  <div class="xl:grid xl:grid-cols-12 xl:gap-32">
     <div class="xl:col-span-4">
       <address class="not-italic leading-[1.55]">
         <div>
@@ -51,9 +51,9 @@
 
 {{ if access || map }}
 <div class="bg-sky/20 mt-60 xl:mt-90 pb-60 md:pb-90">
-  <div class="xl:grid xl:grid-cols-12 xl:gap-16 max-w-page mx-auto">
+  <div class="xl:grid xl:grid-cols-12 xl:gap-32 max-w-page mx-auto">
     {{ if access }}
-      <div class="px-30 md:px-80 pt-60 xl:col-span-5 2xl:col-span-4 [&_h2]:text-2xl md:[&_h2]:text-3xl xl:[&_h2]:text-4xl">
+      <div class="px-30 md:px-80 xl:px-120 pt-60 xl:col-span-5 2xl:col-span-4 [&_h2]:text-2xl md:[&_h2]:text-3xl xl:[&_h2]:text-4xl">
         {{ access }}
       </div>
     {{ /if }}
