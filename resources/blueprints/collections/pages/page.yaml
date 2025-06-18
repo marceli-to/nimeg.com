@@ -21,9 +21,10 @@ tabs:
               type: replicator
               display: Inhalte
               localizable: true
+              collapse: true
               sets:
                 content_elements:
-                  display: 'Content elements'
+                  display: Elemente
                   sets:
                     intro_visual:
                       display: 'Intro Visual'
@@ -46,6 +47,13 @@ tabs:
                       fields:
                         -
                           import: image_gallery
+                    projects:
+                      display: Projekte
+                      instructions: 'Projekte anzeigen'
+                      icon: file-content-list
+                      fields:
+                        -
+                          import: project_listing
                     team_listing:
                       display: Team
                       instructions: 'Team anzeigen'
@@ -60,23 +68,6 @@ tabs:
                       fields:
                         -
                           import: job_listing
-                    projects:
-                      display: Projekte
-                      instructions: 'Projekte anzeigen'
-                      icon: file-content-list
-                      fields:
-                        -
-                          import: project_listing
-                special_elements:
-                  display: 'Special Elements'
-                  sets:
-                    info_panels:
-                      display: 'Info Panels'
-                      instructions: 'Info Panels hinzufügen'
-                      icon: layout-grid-dots
-                      fields:
-                        -
-                          import: info_panels
                     contact:
                       display: Kontakt
                       instructions: 'Kontaktinformationen hinzufügen'
@@ -84,6 +75,13 @@ tabs:
                       fields:
                         -
                           import: contact
+                    info_panels:
+                      display: 'Info Panels'
+                      instructions: 'Info Panels hinzufügen'
+                      icon: layout-grid-dots
+                      fields:
+                        -
+                          import: info_panels
   seo:
     display: SEO
     sections:

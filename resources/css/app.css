@@ -61,6 +61,10 @@ strong {
   @apply font-bold;
 }
 
+.gallery-container:first-of-type {
+  @apply mt-60 xl:mt-80
+}
+
 .fancybox__backdrop {
   @apply !bg-sky/80
 }
