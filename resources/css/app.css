@@ -58,7 +58,7 @@ main h3 {
 }
 
 .privacy main h2 {
-  @apply text-sm xl:text-md mb-0
+  @apply text-sm xl:text-md mb-10
 }
 
 strong {
