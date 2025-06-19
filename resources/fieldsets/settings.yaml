@@ -1,52 +1,26 @@
 title: Settings
 fields:
   -
-    handle: show_maps
-    field:
-      default: true
-      type: toggle
-      display: 'Show maps'
-      icon: toggle
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false
-  -
     handle: debug
     field:
-      default: false
       type: toggle
       display: Debug
-      icon: toggle
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false
+  -
+    handle: page_class
+    field:
+      options:
+        -
+          key: privacy
+          value: Impressum/Datenschutz
+      type: select
+      display: 'Seiten CSS Klasse'
   -
     handle: template
     field:
-      hide_partials: true
-      blueprint: false
       type: template
       display: Template
-      icon: template
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false
   -
     handle: layout
     field:
-      hide_partials: true
-      blueprint: false
       type: template
       display: Layout
-      icon: template
-      listable: hidden
-      instructions_position: above
-      visibility: visible
-      replicator_preview: true
-      hide_display: false
