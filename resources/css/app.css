@@ -57,6 +57,10 @@ main h3 {
   @apply font-bold uppercase
 }
 
+.privacy main h2 {
+  @apply text-sm xl:text-md
+}
+
 strong {
   @apply font-bold;
 }
