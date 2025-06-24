@@ -3,7 +3,7 @@
   <div class="xl:grid xl:grid-cols-12 xl:gap-32">
     <div class="xl:col-span-4">
       <address class="not-italic leading-[1.55]">
-        <div>
+        <div class="[&_a]:no-underline [&_a]:hover:underline [&_a]:decoration-1 [&_a]:underline-offset-4">
           {{ if contact_information:address }}
             {{ contact_information:address | nl2br }}
           {{ /if }}
@@ -59,7 +59,13 @@
     {{ /if }}
     {{ if map }}
       <div class="pt-60 md:pt-90 md:px-80 xl:col-span-8 xl:col-start-5 xl:flex xl:flex-col xl:justify-center">
-        {{ partial:components/media/image :image="map"}}
+        <a 
+          href="https://www.google.com/maps/place/T%C3%A4fernstrasse+14a,+5405+Baden/@47.4478997,8.2905968,893m/data=!3m2!1e3!4b1!4m6!3m5!1s0x479013413da62483:0x9e2d519e5896282e!8m2!3d47.4478961!4d8.2931771!16s%2Fg%2F11dzpj9w9j?entry=tts&g_ep=EgoyMDI1MDYxMS4wIPu8ASoASAFQAw%3D%3D&skid=874341fe-7eee-43c2-a4cf-3dd20761eb9e"
+          target="_blank"
+          title="Karte öffnen"
+          class="group">
+          {{ partial:components/media/image :image="map" wrapperClass="overflow-hidden" class="group-hover:scale-105 transition-all duration-300" }}
+        </a>
       </div>
     {{ /if }}
   </div>

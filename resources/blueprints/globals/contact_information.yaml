@@ -7,7 +7,17 @@ tabs:
           -
             handle: address
             field:
-              type: textarea
+              buttons:
+                - bold
+                - unorderedlist
+                - removeformat
+                - anchor
+              toolbar_mode: floating
+              remove_empty_nodes: true
+              link_collections:
+                - pages
+              container: assets
+              type: bard
               display: Adresse
           -
             handle: phone

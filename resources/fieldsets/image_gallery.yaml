@@ -1,19 +1,8 @@
 title: Bildergalerie
 fields:
   -
-    handle: rows
+    handle: images
     field:
-      type: replicator
-      display: Zeilen
-      collapse: true
-      sets:
-        neue_setgruppe:
-          display: 'Neue Setgruppe'
-          sets:
-            image_galler_row:
-              display: Bilder
-              instructions: 'Bilder hinzufürgen'
-              icon: media-image-picture-gallery
-              fields:
-                -
-                  import: image_gallery_row
+      container: assets
+      type: assets
+      display: Bilder

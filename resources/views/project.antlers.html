@@ -14,36 +14,37 @@
 
     <div class="flex flex-col gap-y-30 xl:grid xl:grid-cols-12 xl:gap-x-16">
       {{ if text }}
-        <div class="xl:col-span-6 2xl:col-span-7 xl:pr-60">
+        <div class="xl:col-span-8 2xl:col-span-9 2xl:max-w-5xl xl:pr-60">
           {{ text }}
         </div>
       {{ /if }}
 
-      <div class="flex flex-col md:flex-row md:flex-wrap xl:col-span-6 2xl:col-span-5 gap-y-30">
+      <div class="flex flex-col xl:col-span-4 2xl:col-span-3 gap-y-30">
 
-        {{ if tags }}
-          <div class="md:order-1 md:w-1/2 md:pr-8">
-            <h2 class="text-sm xl:text-md mb-0">
-              Leistungen
-            </h2>
-            {{ tags }}
-              <div>{{ title }}</div>
-            {{ /tags }}
+        {{ if tags || periode }}
+          <div class="">
 
             {{ if periode }}
-            <div class="mt-40">
               <h2 class="text-sm xl:text-md mb-0">
                 Jahr
               </h2>
               {{ periode }}
-            </div>
-          {{ /if }}
+            {{ /if }}
+
+            {{ if tags }}
+              <h2 class="text-sm xl:text-md mb-0 !mt-30">
+                Leistungen
+              </h2>
+              {{ tags }}
+                <div>{{ title }}</div>
+              {{ /tags }}
+            {{ /if }}
 
           </div>
         {{ /if }}
 
         {{ if credits }}
-          <div class="md:order-2 md:w-1/2 md:pl-8">
+          <div class="">
             {{ credits }}
           </div>
         {{ /if }}
@@ -59,15 +60,15 @@
       {{ gallery_images }}
         <a 
           data-fancybox="gallery" 
-          href="{{ glide:url preset="project-xl"}}"
-          class="md:col-span-6 xl:col-span-4">
+          href="{{ glide:url preset="gallery-xl"}}"
+          class="md:col-span-6 xl:col-span-4 2xl:col-span-3 group">
           <figure>
             <picture>
-              <source media="(min-width: 1024px)" srcset="{{ glide:url preset="project-preview-lg-webp" }}" type="image/webp">
-              <source media="(min-width: 1024px)" srcset="{{ glide:url preset="project-preview-lg" }}" type="image/jpeg">
-              <source srcset="{{ glide:url preset="project-preview-sm-webp" }}" />
+              <source media="(min-width: 1024px)" srcset="{{ glide:url preset="thumbnail-lg-webp" }}" type="image/webp">
+              <source media="(min-width: 1024px)" srcset="{{ glide:url preset="thumbnail-lg" }}" type="image/jpeg">
+              <source srcset="{{ glide:url preset="thumbnail-sm-webp" }}" />
               <img
-                src="{{ glide:url preset="project-preview-sm" }}" 
+                src="{{ glide:url preset="thumbnail-sm" }}" 
                 alt="{{ alt }}" 
                 title="{{ alt }}" 
                 height="{{ height }}" 

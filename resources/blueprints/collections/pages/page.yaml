@@ -40,13 +40,6 @@ tabs:
                       fields:
                         -
                           import: texteditor
-                    image_gallery:
-                      display: Bildergalerie
-                      instructions: 'Bildergalerie hinzufügen'
-                      icon: media-image-picture-gallery
-                      fields:
-                        -
-                          import: image_gallery
                     projects:
                       display: Projekte
                       instructions: 'Projekte anzeigen'
@@ -82,6 +75,13 @@ tabs:
                       fields:
                         -
                           import: info_panels
+                    image_gallery:
+                      display: Bildergalerie
+                      instructions: 'Bildergalerie hinzufügen'
+                      icon: media-image-picture-gallery
+                      fields:
+                        -
+                          import: image_gallery
   seo:
     display: SEO
     sections:

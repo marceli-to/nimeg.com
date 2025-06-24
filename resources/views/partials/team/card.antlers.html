@@ -2,22 +2,40 @@
   {{ if image !== null }}
     <picture>
       {{ if isContact }}
-        <source media="(min-width: 1280px)" srcset="{{ glide:image preset="team-lg-webp" }}" type="image/webp">
-        <source media="(min-width: 1280px)" srcset="{{ glide:image preset="team-lg" }}" type="image/jpeg">
-        <source srcset="{{ glide:image preset="team-sm-webp" }}" />
+        {{ if image_contact }}
+          <source media="(min-width: 1280px)" srcset="{{ glide:image_contact preset="team-lg-webp" }}" type="image/webp">
+          <source media="(min-width: 1280px)" srcset="{{ glide:image_contact preset="team-lg" }}" type="image/jpeg">
+          <source srcset="{{ glide:image_contact preset="team-sm-webp" }}" />
+        {{ else }}
+          <source media="(min-width: 1280px)" srcset="{{ glide:image preset="team-lg-webp" }}" type="image/webp">
+          <source media="(min-width: 1280px)" srcset="{{ glide:image preset="team-lg" }}" type="image/jpeg">
+          <source srcset="{{ glide:image preset="team-sm-webp" }}" />
+        {{ /if }}
       {{ else }}
         <source media="(min-width: 1024px)" srcset="{{ glide:image preset="team-lg-webp" }}" type="image/webp">
         <source media="(min-width: 1024px)" srcset="{{ glide:image preset="team-lg" }}" type="image/jpeg">
         <source srcset="{{ glide:image preset="team-sm-webp" }}" />
       {{ /if }}
-      <img
-        src="{{ glide:image preset="team-sm" }}" 
-        alt="{{ firstname }} {{ lastname }}" 
-        title="{{ firstname }} {{ lastname }}" 
-        height="{{ image:height }}" 
-        width="{{ image:width }}"
-        class="block w-full h-auto {{ class ?? '' }}"
-        loading="lazy">
+
+      {{ if isContact && image_contact }}
+        <img
+          src="{{ glide:image_contact preset="team-sm" }}" 
+          alt="{{ firstname }} {{ lastname }}" 
+          title="{{ firstname }} {{ lastname }}" 
+          height="{{ image:height }}" 
+          width="{{ image:width }}"
+          class="block w-full h-auto {{ class ?? '' }}"
+          loading="lazy">
+      {{ else }}
+        <img
+          src="{{ glide:image preset="team-sm" }}" 
+          alt="{{ firstname }} {{ lastname }}" 
+          title="{{ firstname }} {{ lastname }}" 
+          height="{{ image:height }}" 
+          width="{{ image:width }}"
+          class="block w-full h-auto {{ class ?? '' }}"
+          loading="lazy">
+      {{ /if }}
     </picture>
   {{ else }}
   <div class="aspect-square lg:aspect-[648/790] bg-sky"></div>

@@ -123,12 +123,12 @@ return [
           'team-sm' => ['w' => 900, 'h' => 900, 'q' => 90, 'fit' => 'crop_focal'],
 
           // Project - preview
-          'project-xl' => ['w' => 2000, 'h' => 10000, 'q' => 90, 'fit' => 'contain'],
+          'gallery-xl' => ['w' => 2000, 'h' => 10000, 'q' => 90, 'fit' => 'contain'],
 
-          'project-preview-lg-webp' => ['w' => 1200, 'h' => 940, 'q' => 90, 'fit' => 'crop', 'fm' => 'webp'],
-          'project-preview-lg' => ['w' => 1200, 'h' => 940, 'q' => 90, 'fit' => 'crop'],
-          'project-preview-sm-webp' => ['w' => 900, 'h' => 705, 'q' => 90, 'fit' => 'crop', 'fm' => 'webp'],
-          'project-preview-sm' => ['w' => 900, 'h' => 705, 'q' => 90, 'fit' => 'crop'],
+          'thumbnail-lg-webp' => ['w' => 1200, 'h' => 940, 'q' => 90, 'fit' => 'crop', 'fm' => 'webp'],
+          'thumbnail-lg' => ['w' => 1200, 'h' => 940, 'q' => 90, 'fit' => 'crop'],
+          'thumbnail-sm-webp' => ['w' => 900, 'h' => 705, 'q' => 90, 'fit' => 'crop', 'fm' => 'webp'],
+          'thumbnail-sm' => ['w' => 900, 'h' => 705, 'q' => 90, 'fit' => 'crop'],
 
           
           'max_upload_size' => ['w' => 2500, 'h' => 2500, 'fit' => 'max'],

@@ -12,6 +12,16 @@ tabs:
               type: assets
               display: Portrait
               folder: team
+              width: 50
+          -
+            handle: image_contact
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: 'Portrait (Kontaktseite)'
+              folder: team
+              width: 50
           -
             handle: firstname
             field:
