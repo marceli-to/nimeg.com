@@ -1,5 +1,5 @@
 <div class="hidden xl:flex flex-wrap gap-8 xl:gap-12 w-full">
-  {{ taxonomy:tags }}
+  {{ taxonomy:tags sort="sort_order" }}
     {{ if entries }}
       {{ partial:projects/filter/pill }}
     {{ /if }}
