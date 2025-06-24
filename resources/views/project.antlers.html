@@ -55,30 +55,5 @@
 {{ /partial:layout/container }}
 
 {{ if gallery_images }}
-  <div class="container max-w-page mx-auto md:px-80 xl:px-120">
-    <div class="flex flex-col gap-y-16 md:grid md:grid-cols-12 md:gap-16">
-      {{ gallery_images }}
-        <a 
-          data-fancybox="gallery" 
-          href="{{ glide:url preset="gallery-xl"}}"
-          class="md:col-span-6 xl:col-span-4 2xl:col-span-3 group">
-          <figure>
-            <picture>
-              <source media="(min-width: 1024px)" srcset="{{ glide:url preset="thumbnail-lg-webp" }}" type="image/webp">
-              <source media="(min-width: 1024px)" srcset="{{ glide:url preset="thumbnail-lg" }}" type="image/jpeg">
-              <source srcset="{{ glide:url preset="thumbnail-sm-webp" }}" />
-              <img
-                src="{{ glide:url preset="thumbnail-sm" }}" 
-                alt="{{ alt }}" 
-                title="{{ alt }}" 
-                height="{{ height }}" 
-                width="{{ width }}"
-                class="block w-full h-auto {{ class ?? '' }} group-hover:opacity-75 transition-opacity duration-150"
-                loading="lazy">
-            </picture>
-          </figure>
-        </a>
-      {{ /gallery_images }}
-    </div>
-  </div>
+  {{ partial:components/media/gallery :images="gallery_images" }}
 {{ /if }}
