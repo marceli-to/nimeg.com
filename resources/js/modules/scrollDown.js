@@ -1,5 +1,5 @@
 document.querySelector('[data-btn-scroll-down]').addEventListener('click', function(e) {
-  e.preventDefault(); // prevent anchor default behavior
+  e.preventDefault();
   window.scrollBy({
     top: 650,
     left: 0,
