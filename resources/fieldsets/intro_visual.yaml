@@ -24,3 +24,40 @@ fields:
       remove_empty_nodes: true
       type: bard
       display: Text
+      sets:
+        link:
+          display: Link
+          instructions: 'Link hinzufügen'
+          icon: link
+          sets:
+            link:
+              display: Link
+              instructions: 'Link hinzufügen'
+              icon: link
+              fields:
+                -
+                  handle: url
+                  field:
+                    collections:
+                      - pages
+                    container: assets
+                    type: link
+                    display: Link
+                -
+                  handle: link_text
+                  field:
+                    type: text
+                    display: Linktext
+                -
+                  handle: target
+                  field:
+                    options:
+                      -
+                        key: _self
+                        value: 'Gleiches Fenster'
+                      -
+                        key: _blank
+                        value: 'Neues Fenster'
+                    default: _self
+                    type: select
+                    display: 'Fenster öffnen in'

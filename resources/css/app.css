@@ -79,4 +79,16 @@ strong {
 .fancybox__content {
   @apply !p-20
 }
-  
+
+/* Swiper pagination styling */
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  @apply bottom-8 xl:!bottom-0;
+}
+
+.swiper-pagination-bullet {
+  @apply !w-10 !h-10 xl:!w-12 xl:!h-12 !bg-white !opacity-50 !mx-6;
+}
+
+.swiper-pagination-bullet-active {
+  @apply !opacity-100;
+}

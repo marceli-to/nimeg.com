@@ -82,6 +82,13 @@ tabs:
                       fields:
                         -
                           import: image_gallery
+                    slideshow:
+                      display: Slideshow
+                      instructions: 'Slideshow hinzufügen'
+                      icon: media-image-picture-gallery
+                      fields:
+                        -
+                          import: slideshow
   seo:
     display: SEO
     sections:

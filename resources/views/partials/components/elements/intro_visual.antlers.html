@@ -1,11 +1,24 @@
-<div class="relative visual">
-  {{ partial:components/media/image 
+<div class="relative {{ class}}">
+  {{ partial:components/media/image
       class="w-full h-full aspect-[4/3] md:aspect-[16/10] lg:aspect-[16/9] xl:aspect-[16/8] 2xl:aspect-[16/7] object-cover"
       :sizes="['2xl', 'xl', 'lg']"
     }}
   {{ if title || text }}
     <div>
-      <div class="bg-sky/80 text-white p-30 md:px-80 md:py-40 xl:py-30 xl:px-40 xl:absolute xl:bottom-80 xl:right-120 3xl:[right:calc((100vw-106rem)/2)] xl:max-w-[700px]">
+      <div class="
+        bg-sky/80
+         text-white 
+         p-30 
+         md:px-80 
+         md:py-40 
+         xl:py-30 
+         xl:px-40 
+         xl:absolute 
+         xl:bottom-80 
+         xl:right-120 
+         3xl:[right:calc((100vw-106rem)/2)] 
+         xl:max-w-[700px] 
+         {{ if slideshow }} !pb-60 xl:!pb-30 slideshow-content{{ /if }}">
         {{ if title }}
           <h1 class="font-bold text-2xl md:text-3xl xl:text-3xl 2xl:text-4xl leading-[1.1] mb-30 xl:mb-20">
             {{ title }}
@@ -14,6 +27,23 @@
         {{ if text }}
           <div class="text-lg md:text-xl xl:text-lg">
             {{ text }}
+            
+              {{ if type == 'text' }}
+                {{ text}}
+              {{ /if }}
+
+              {{ if type == 'link' }}
+                <a 
+                  href="{{ url }}"
+                  aria-label="{{ link_text }}"
+                  title="{{ link_text }}"
+                  target="{{ target }}"
+                  class="flex items-center gap-x-8 group">
+                  <span>{{ link_text }}</span>
+                  {{ partial:icons/arrow-right class="w-16 xl:w-18 h-auto group-hover:translate-x-4 transition-all" }}
+                </a>
+              {{ /if }}
+            {{ /text }}
           </div>
         {{ /if }}
       </div>

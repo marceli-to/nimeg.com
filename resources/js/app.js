@@ -10,3 +10,4 @@ import './bootstrap';
 import './modules/filter';
 import './modules/lightbox';
 import './modules/scrollDown';
+import './modules/swiper';

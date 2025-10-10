@@ -1,5 +1,5 @@
 {{ if type == 'intro_visual' }}
-  {{ partial:components/elements/intro_visual :image="image" }}
+  {{ partial:components/elements/intro_visual :image="image" class="visual" }}
 {{ /if }}
 
 {{ if type == 'texteditor' }}
@@ -25,6 +25,11 @@
 {{ if type == 'projects' }}
   {{ partial:projects/listing }}
 {{ /if }}
+
+{{ if type == 'slideshow' }}
+  {{ partial:components/media/slideshow/wrapper class="visual" }}
+{{ /if }}
+
 
 
 

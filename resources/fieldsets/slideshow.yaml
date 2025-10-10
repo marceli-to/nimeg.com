@@ -1,0 +1,18 @@
+title: Slideshow
+fields:
+  -
+    handle: slides
+    field:
+      type: replicator
+      display: Slides
+      sets:
+        neue_setgruppe:
+          display: 'Neue Setgruppe'
+          sets:
+            slide:
+              display: Slide
+              instructions: 'Slide hinzufügen'
+              icon: text-formatting-image-top
+              fields:
+                -
+                  import: intro_visual
