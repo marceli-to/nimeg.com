@@ -1,12 +1,28 @@
 <header class="sticky top-0 h-95 xl:h-145 bg-white z-20">
   {{ partial:partials/layout/container class="h-[inherit]" }}
     <div class="w-full flex items-center justify-between h-[inherit]">
+      <div class="flex gap-x-12 md:gap-x-30 items-center">
       {{ partial:menu/buttons/show }}
+
+      {{ if button_jobs:is_visible }}
+        <div class="xl:hidden">
+          <a 
+            href="{{ button_jobs:link }}" 
+            class="bg-sky hover:bg-granite transition-colors rounded-full block grow-0 leading-none text-white font-bold text-sm xs:text-md md:text-lg px-10 py-5 md:px-15 md:py-8"
+            target="{{ is_external ? '_blank' : '_self' }}"
+            aria-label="{{ button_jobs:link_text }}"
+            title="{{ button_jobs:link_text }}">
+            {{ button_jobs:link_text }}
+          </a>
+        </div>
+      {{ /if }}
+      </div>
+
       {{ partial:menu/wrapper }}
       <a 
         href="/" 
         title="Startseite">
-        {{ partial:icons/logo class="w-175 xl:w-[215px] h-auto mt-5" }}
+        {{ partial:icons/logo class="w-125 xs:w-175 xl:w-[215px] h-auto mt-5" }}
       </a>
     </div>
   {{ /partial:partials/layout/container }}

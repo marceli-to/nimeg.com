@@ -1,0 +1,22 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: is_visible
+            field:
+              default: true
+              type: toggle
+              display: Anzeigen
+          -
+            handle: link
+            field:
+              type: link
+              display: Link
+          -
+            handle: link_text
+            field:
+              type: text
+              display: Linktext

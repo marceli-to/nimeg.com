@@ -33,4 +33,9 @@ tabs:
             handle: linkedin_url
             field:
               type: text
-              display: 'LinkedIn Profil'
+              display: LinkedIn
+          -
+            handle: instagram_url
+            field:
+              type: text
+              display: Instagram

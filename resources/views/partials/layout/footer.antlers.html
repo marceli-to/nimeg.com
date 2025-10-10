@@ -36,15 +36,26 @@
     </div>
     
     <div class="md:col-span-4 md:flex md:flex-col md:justify-between">
-      {{ if contact_information:linkedin_url }}
-        <a
-          href="{{ contact_information:linkedin_url }}"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="nimeg ag auf LinkedIn">
-          {{ partial:icons/linkedin }}
-        </a>
-      {{ /if }}
+      <div class="flex items-center gap-x-12">
+        {{ if contact_information:linkedin_url }}
+          <a
+            href="{{ contact_information:linkedin_url }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="nimeg ag auf LinkedIn">
+            {{ partial:icons/linkedin }}
+          </a>
+        {{ /if }}
+        {{ if contact_information:instagram_url }}
+          <a
+            href="{{ contact_information:instagram_url }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="nimeg ag auf Instagram">
+            {{ partial:icons/instagram }}
+          </a>
+        {{ /if }}
+      </div>
       <nav class="mt-20 md:mt-0 leading-[1.55]">
         <ul>
           {{ nav:footer }}

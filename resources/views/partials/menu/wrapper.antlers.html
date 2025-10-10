@@ -16,6 +16,19 @@
       {{ nav:main }}
         {{ partial:menu/items/parent }}
       {{ /nav:main }}
+
+      {{ if button_jobs:is_visible }}
+        <li class="xl:py-7 hidden xl:list-item" >
+          <a 
+            href="{{ button_jobs:link }}" 
+            class="bg-sky hover:bg-granite transition-colors rounded-full block leading-none text-white font-bold xl:text-lg xl:py-8 xl:px-15"
+            target="{{ is_external ? '_blank' : '_self' }}"
+            aria-label="{{ button_jobs:link_text }}"
+            title="{{ button_jobs:link_text }}">
+            {{ button_jobs:link_text }}
+          </a>
+        </li>
+      {{ /if }}
     </ul>
   </nav>
 </div>
