@@ -6,3 +6,15 @@ fields:
       container: assets
       type: assets
       display: Bilder
+  -
+    handle: splash
+    field:
+      buttons:
+        - unorderedlist
+        - removeformat
+        - anchor
+      toolbar_mode: floating
+      remove_empty_nodes: true
+      type: bard
+      display: Störer
+      instructions: 'Wird am Ende der Galerie angezeigt'

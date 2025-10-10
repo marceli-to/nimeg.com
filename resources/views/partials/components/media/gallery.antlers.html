@@ -23,6 +23,11 @@
           </figure>
         </a>
       {{ /images }}
+      {{ if splash }}
+        <div class="bg-sky text-white flex items-center justify-center text-center text-balance px-20 xl:px-30 md:col-span-6 xl:col-span-4 2xl:col-span-3 group aspect-[365/286]">
+          {{ splash }}
+        </div>
+      {{ /if}}
     </div>
   </div>
 {{ /if }}

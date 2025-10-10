@@ -5,6 +5,7 @@ fields:
     field:
       type: replicator
       display: Slides
+      collapse: true
       sets:
         neue_setgruppe:
           display: 'Neue Setgruppe'
