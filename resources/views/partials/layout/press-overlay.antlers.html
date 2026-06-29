@@ -4,13 +4,12 @@
     open: false,
     storageKey: 'press_overlay_dismissed_pressemitteilung-nimeg-spie',
     init() {
-      {{# TESTING: state storing disabled — overlay always shows. #}}
       this.open = true;
-      {{# this.open = window.localStorage.getItem(this.storageKey) !== '1'; #}}
+      this.open = window.localStorage.getItem(this.storageKey) !== '1';
     },
     close() {
       this.open = false;
-      {{# window.localStorage.setItem(this.storageKey, '1'); #}}
+      window.localStorage.setItem(this.storageKey, '1');
     }
   }"
   x-cloak
