@@ -1,0 +1,64 @@
+{{# Press release overlay — shown once until dismissed (state in localStorage). #}}
+<div
+  x-data="{
+    open: false,
+    storageKey: 'press_overlay_dismissed_pressemitteilung-nimeg-spie',
+    init() {
+      {{# TESTING: state storing disabled — overlay always shows. #}}
+      this.open = true;
+      {{# this.open = window.localStorage.getItem(this.storageKey) !== '1'; #}}
+    },
+    close() {
+      this.open = false;
+      {{# window.localStorage.setItem(this.storageKey, '1'); #}}
+    }
+  }"
+  x-cloak
+  x-show="open"
+  x-transition.opacity.duration.300ms
+  @keydown.escape.window="close()"
+  class="fixed inset-0 z-[100] flex items-center justify-center p-20"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="press-overlay-title"
+  style="display: none;">
+
+  {{# Backdrop #}}
+  <div
+    class="absolute inset-0 bg-white/80"
+    @click="close()"></div>
+
+  {{# Dialog #}}
+  <div
+    class="relative z-10 w-full max-w-[36rem] bg-sky text-white font-source-sans shadow-2xl px-30 py-20 md:px-40 md:py-35"
+    x-show="open"
+    x-transition.scale.origin.center.duration.300ms>
+
+    <button
+      type="button"
+      @click="close()"
+      aria-label="Schliessen"
+      title="Schliessen"
+      class="absolute top-20 right-20 text-white hover:text-white/80 transition-colors">
+      {{ partial:icons/cross class="w-16 h-16 md:w-20 md:h-20" }}
+    </button>
+
+    <h2 id="press-overlay-title" class="font-bold text-xl md:text-2xl leading-[1.28] mb-20 pr-30">
+      Pressemitteilung
+    </h2>
+
+    <p class="mb-30">
+      Die nimeg ag wird Teil der SPIE Gruppe. Erfahren Sie mehr in unserer aktuellen Pressemitteilung.
+    </p>
+
+    <a
+      href="/assets/downloads/pressemitteilung-nimeg-spie.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      @click="close()"
+      class="bg-white transition-colors rounded-full inline-block grow-0 leading-none text-granite hover:text-sky font-bold text-sm xs:text-md md:text-lg px-15 py-8 md:px-20 md:py-10">
+      Pressemitteilung lesen
+    </a>
+
+  </div>
+</div>
